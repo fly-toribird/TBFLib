@@ -2,6 +2,7 @@
 
 This is ToriBird's Formula Library.
 You can use formula with limit, and Case-wise formulas.
+Link : https://pypi.org/project/TBFLib/
 
 # how to use
 
