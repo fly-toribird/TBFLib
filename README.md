@@ -4,7 +4,7 @@ This is ToriBird's Formula Library. /n
 You can use formula with limit, and Case-wise formulas. /n
 Link : https://pypi.org/project/TBFLib/
 
-# how to use
+# How to use
 
 * Normal Formula -> TBFLib.Formula("Your formula:str","Args in your formula:str")
 * Limit -> TBFLib.Limit("min:number","value:str",max:number,"n(This means "<") or e(This means "<="):str","n or e")
