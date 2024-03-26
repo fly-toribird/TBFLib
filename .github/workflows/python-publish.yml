@@ -1,9 +1,7 @@
 # https://github.com/fly-toribird/TBFLib/blob/master/.github/workflows/python-publish.yml
 name: Upload Python Package
 
-on:
-  release:
-    types: [ release ]
+on: [ release ]
 
 jobs:
   deploy:
