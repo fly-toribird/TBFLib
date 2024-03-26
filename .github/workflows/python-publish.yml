@@ -10,7 +10,7 @@ jobs:
     environment: release
     permissions:
       # IMPORTANT: this permission is mandatory for trusted publishing
-      id-token: write
+      id-token: ${{ secrets.PYPI_TOKEN }}
     steps:
       # retrieve your distributions here
 
