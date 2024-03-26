@@ -17,12 +17,6 @@ class Formula:
         return self.args
 
 
-_f = Formula("x**2 + 4 * x + 4", "x")
-
-
-# print(_f.calc(4))
-
-
 class Limit:
     """(min_limit, value, max_limit, mode_min="e", mode_max="e")"""
 
@@ -79,12 +73,6 @@ class Limit:
                         return False
 
 
-_range1 = Limit(2, "x", 10)
-
-
-# print(_range1.check("x", 1))
-
-
 class LimitedFormula:
     """(formula, *limits)"""
 
@@ -101,12 +89,6 @@ class LimitedFormula:
 
     def getargs(self):
         return self.formula.getargs()
-
-
-_g = LimitedFormula(_f, Limit(2, "x", 5))
-
-
-# print(_g.calc(4))
 
 
 class Formulas:
@@ -128,7 +110,3 @@ class Formulas:
         if len(answers) == 1:
             return answers[0]
         return tuple(answers)
-
-
-_fs = Formulas(_f, _g)
-# print(_fs.calc(10))

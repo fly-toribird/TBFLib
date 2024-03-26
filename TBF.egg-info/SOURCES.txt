@@ -1,7 +1,0 @@
-setup.py
-TBF/TBF.py
-TBF/__init__.py
-TBF.egg-info/PKG-INFO
-TBF.egg-info/SOURCES.txt
-TBF.egg-info/dependency_links.txt
-TBF.egg-info/top_level.txt

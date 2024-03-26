@@ -1,1 +1,1 @@
-from TBF.TBF import *
+from TBF.Main import *
