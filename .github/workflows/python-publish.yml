@@ -24,5 +24,4 @@ jobs:
           TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
         run: |
           # ソース配布型
-          python setup.py sdist bdist_wheel
           twine upload dist/*
