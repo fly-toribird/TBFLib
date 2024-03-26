@@ -1,5 +1,5 @@
 [project]
-name = "TBF"
+name = "TBFLib"
 version = "1.0"
 description = "That's Formula module for python."
 readme = "README.md"
