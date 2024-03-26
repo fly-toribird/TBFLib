@@ -1,35 +1,18 @@
-name: Publish Python 🐍 distributions 📦 to PyPI
+[project]
+name = "TBFLib"
+version = "1.0"
+description = "That's Formula module for python."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { file = "LICENSE" }
+authors = [
+    { name = "fly-toribird", email = "fly-toribird@outlook.com" }
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Mathematics"
+]
+dependencies = []
 
-on:
-  release:
-    types: [published]
-
-jobs:
-  build-n-publish:
-    name: Build and publish Python 🐍 distributions 📦 to PyPI
-    runs-on: ubuntu-latest
-    environment: release
-    permissions:
-      id-token: write
-    steps:
-    - uses: actions/checkout@v4
-    - name: Set up Python 3.x
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.x'
-    - name: Install pypa/build
-      run: >-
-        python -m
-        pip install
-        build
-        --user
-    - name: Build a binary wheel and a source tarball
-      run: >-
-        python -m
-        build
-        --sdist
-        --wheel
-        --outdir dist/
-        .
-    - name: Publish distribution 📦 to PyPI
-      uses: pypa/gh-action-pypi-publish@release/v1
+[project.urls]
+Repository = "https://github.com/fly-toribird/TBF"
