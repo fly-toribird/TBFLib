@@ -1,23 +1,7 @@
 # https://github.com/fly-toribird/TBFLib/blob/master/.github/workflows/python-publish.yml
 name: Upload Python Package
 
-on:
-  workflow_dispatch:
-    inputs:
-      logLevel:
-        description: 'Log level'
-        required: true
-        default: 'warning'
-        type: choice
-        options:
-        - info
-        - warning
-        - debug
-      tags:
-        description: 'Test scenario tags'
-        required: false
-        type: boolean
-
+on: [release]
 jobs:
   deploy:
     runs-on: ubuntu-latest
