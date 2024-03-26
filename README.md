@@ -21,6 +21,9 @@ g = LimitedFormula(f, Limit(2, "x", 5))
 print(g.calc(4))
 fs = Formulas(f, g)
 print(fs.calc(10))
+~~~
+
+~~~
 >>>36
 >>>False
 >>>36
