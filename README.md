@@ -1,7 +1,7 @@
 # ToriBird's Formula library (TBFLib)
 
-This is ToriBird's Formula Library. /n
-You can use formula with limit, and Case-wise formulas. /n
+This is ToriBird's Formula Library.  
+You can use formula with limit, and Case-wise formulas.  
 Link : https://pypi.org/project/TBFLib/
 
 # How to use
