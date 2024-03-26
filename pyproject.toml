@@ -1,6 +1,6 @@
 [project]
 name = "TBFLib"
-version = "1.1-release"
+version = "1.1"
 description = "That's Formula module for python."
 readme = "README.md"
 requires-python = ">=3.8"
