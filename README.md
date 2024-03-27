@@ -22,6 +22,9 @@ g = TBFLib.LimitedFormula(f, TBFLib.Limit(2, "x", 5))
 print(g.calc(4))
 fs = TBFLib.Formulas(f, g)
 print(fs.calc(10))
+f.getformula()
+limit1.getlimit()
+fs.getargs()
 ~~~
 
 ~~~
@@ -29,4 +32,7 @@ print(fs.calc(10))
 >>>False
 >>>36
 >>>144
+>>>x**2 + 4 * x + 4
+>>>2<=x<=10
+>>>"x"
 ~~~
