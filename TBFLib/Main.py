@@ -142,16 +142,9 @@ class Formulas:
         return self.formulas
 
 
-def differentiate(formula,value):
-    str_formula = formula.getformula()
-    list_formula = list(formula)
-    for i in range(len(list_formula)):
-        if list_formula[i] == value:
-            k = i - 1
-            temp_list = []
-            not_find = True
-            while not_find:
-                if list_formula[k] == "+" or list_formula[k] == "-":
-                    not_find = False
-                temp_list.append(list_formula[k])
-                k -= 1
+def get_formula_with_value(formulas, *values):
+    ans = []
+    for formula in formulas:
+        if formula.calc(*values) is not None:
+            ans.append(formula)
+    return ans
