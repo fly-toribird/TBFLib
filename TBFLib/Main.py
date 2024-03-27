@@ -16,6 +16,9 @@ class Formula:
     def getargs(self):
         return self.args
 
+    def getformula(self):
+        return self.formula
+
 
 class Limit:
     """(min_limit, value, max_limit, mode_min="e", mode_max="e")"""
@@ -72,6 +75,27 @@ class Limit:
                     else:
                         return False
 
+    def getlimit(self):
+        if self.mode_max == "n":
+            mode_max = "<"
+        elif self.mode_max == "e":
+            mode_max = "<="
+        if self.mode_min == "n":
+            mode_min = "<"
+        elif self.mode_min == "e":
+            mode_min = "<="
+        limit = [str(self.min), mode_min, self.value, mode_max, str(self.max)]
+        if self.min == "infinity":
+            limit[0] = None
+            limit[1] = None
+        if self.max == "inifnity":
+            limit[3] = None
+            limit[4] = None
+        limit = [i for i in limit if i is not None]
+        if len(limit) == 1:
+            limit[0] = "NoLimit"
+        return "".join(limit)
+
 
 class LimitedFormula:
     """(formula, *limits)"""
@@ -89,6 +113,9 @@ class LimitedFormula:
 
     def getargs(self):
         return self.formula.getargs()
+
+    def getformula(self):
+        return self.formula.getformula()
 
 
 class Formulas:
@@ -110,3 +137,21 @@ class Formulas:
         if len(answers) == 1:
             return answers[0]
         return tuple(answers)
+
+    def getfomulas(self):
+        return self.formulas
+
+
+def differentiate(formula,value):
+    str_formula = formula.getformula()
+    list_formula = list(formula)
+    for i in range(len(list_formula)):
+        if list_formula[i] == value:
+            k = i - 1
+            temp_list = []
+            not_find = True
+            while not_find:
+                if list_formula[k] == "+" or list_formula[k] == "-":
+                    not_find = False
+                temp_list.append(list_formula[k])
+                k -= 1
